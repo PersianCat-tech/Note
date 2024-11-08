@@ -1,0 +1,11 @@
+     1                                      section .data
+     2 00000000 0000                    data db 0, 0
+     3                                      section  .text
+     4                                      global main
+     5                                  main:    
+     6 00000000 66C70425[00000000]-         mov word [data], 0x2008
+     6 00000008 0820               
+     7 0000000A 803425[00000000]05          xor byte [data], 0x05
+     8 00000012 66810425[00000000]-         add word [data], 0x0101
+     8 0000001A 0101               
+     9 0000001C 668B0425[00000000]          mov ax,[data]
